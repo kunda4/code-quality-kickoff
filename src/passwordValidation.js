@@ -10,13 +10,27 @@ export default function isValidPassword(password = "") {
   // The following line ensures, that password is always a string, like the number 128 -> string "128"
   if (typeof password !== "string") password = String(password);
   if (password.length !== 10) return false;
-  if (password.match(/[a - z][A - Z]/)) return true;
-  if (!password.match(/^[0-9a-zA-Z]+$/)) return false;
-  if (password.match(/\d+/)) return false;
-  if (forbiddenPasswords.includes(password)) {
+  //check if password are among in the forbbiden password
+  if (forbiddenPasswords.includes(password)) return false;
+  // check if password has special character
+  if (/[^a-zA-Z0-9]/.test(password)) return false;
+
+  // check if password has at least one upperCase character or lowerCase character or one digit
+  if (
+    !/[A-Z]/.test(password) ||
+    !/[a-z]/.test(password) ||
+    !/[0-9]/.test(password)
+  )
     return false;
-  }
+  // check if there is no ascending or descending order
+  if (
+    /(012|123|234|345|456|567|678|789|987|876|765|654|543|432|321|210)/.test(
+      password
+    )
+  )
+    return false;
+
   const setOfPassword = new Set([...password]);
-  if (setOfPassword.size < 4) return false;
+  if (setOfPassword.size <= 3) return false;
   return true;
 }
