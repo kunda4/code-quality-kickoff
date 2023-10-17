@@ -5,7 +5,6 @@
  */
 
 // FUNCTION 3
-export default function findMaximumNumber(numbers) {
+export default function findLargestNumber(numbers) {
   return Math.max(...numbers);
 }
-console.log(findMaximumNumber([3, 42, 5, 6, 7, 8, 9]));

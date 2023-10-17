@@ -5,12 +5,6 @@
  */
 
 // FUNCTION 1
-export default function countR(str) {
-  let count = 0;
-  str.split("").map((elt, index) => {
-    if (str[index] == "R") count++;
-  });
-
-  return count;
+export default function countRs(str) {
+  return str.split("").filter((elt) => elt === "R").length;
 }
-console.log(countR("React"));
