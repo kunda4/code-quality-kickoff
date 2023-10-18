@@ -7,8 +7,5 @@
 // FUNCTION 2
 
 export default function processItems(items) {
-  return items.filter((elt, index) => items[index].type === "Food");
+  return items.filter((el) => el.type === "Food");
 }
-console.log(
-  processItems([{ type: "Food" }, { type: "Food" }, { type: "Faod" }])
-);
