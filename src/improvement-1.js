@@ -6,5 +6,5 @@
 
 // FUNCTION 1
 export default function countRs(str) {
-  return str.split("").filter((elt) => elt === "R").length;
+  return str.split("").filter((char) => char === "R").length;
 }

@@ -7,5 +7,5 @@
 // FUNCTION 2
 
 export default function processItems(items) {
-  return items.filter((elt) => elt.type === "Food");
+  return items.filter((el) => el.type === "Food");
 }
