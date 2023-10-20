@@ -3,4 +3,3 @@
 function calculateAverage(numbers) {
   return numbers.reduce((sum, curr) => sum + curr) / numbers.length;
 }
-console.log(calculateAverage([2, 4, 4, 7, 8, 9]));
