@@ -45,6 +45,7 @@ function solution(number) {
   // Iterate through the symbols and values
   for (let i = 0; i < symbols.length; i++) {
     while (number >= values[i]) {
+      console.log(number);
       romanNumeral += symbols[i];
       number -= values[i];
     }
