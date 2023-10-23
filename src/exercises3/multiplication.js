@@ -3,4 +3,4 @@
 //     return x*y;
 //   }
 
-const multplication = (x, y) => x * y;
+const multiplication = (x, y) => x * y;
