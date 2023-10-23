@@ -13,5 +13,5 @@ function calculateAverage(numbers) {
   */
 
 function calculateAverage(numbers) {
-  return numbers.reduce((sum, curr) => sum + curr) / numbers.length;
+  return numbers.reduce((sum, current) => sum + current) / numbers.length;
 }

@@ -14,13 +14,11 @@ function calculateFactorial(n) {
   */
 
 function calculateFactorial(n) {
-  let mult = 1;
+  let multplication = 1;
   if (n === 0 || n === 1) return 1;
 
-  for (let num = 2; num <= n; num++) {
-    mult *= num;
+  for (let number_ = 2; number_ <= n; number_++) {
+    multplication *= number_;
   }
-  return mult;
+  return multplication;
 }
-
-console.log(calculateFactorial(3));

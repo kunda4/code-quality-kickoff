@@ -9,4 +9,4 @@ function reverseString(str) {
   }
   */
 
-const reverseString = (str) => str.split("").reverse().join("");
+const reverseString = (string) => [...string].reverse().join("");
