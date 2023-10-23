@@ -4,4 +4,3 @@
 //   }
 
 const multplication = (x, y) => x * y;
-
