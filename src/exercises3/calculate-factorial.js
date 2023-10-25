@@ -13,12 +13,24 @@ function calculateFactorial(n) {
   }
   */
 
+// function calculateFactorial(n) {
+//   if (n < 2) return 1;
+
+//   for (let number = 2; number <= n; number++) {
+//     let multplication = 1;
+//     multplication *= number;
+//   }
+//   return multplication;
+// }
+
+// using recursive function
+
 function calculateFactorial(n) {
   if (n < 2) return 1;
 
-  for (let number = 2; number <= n; number++) {
-    let multplication = 1;
-    multplication *= number;
-  }
-  return multplication;
+  let factorial = calculateFactorial(n - 1);
+
+  return factorial * n;
 }
+
+console.log(calculateFactorial(3));
