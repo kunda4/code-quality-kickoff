@@ -6,4 +6,3 @@ function primeNumber(number) {
   }
   return true;
 }
-console.log(primeNumber(68));
